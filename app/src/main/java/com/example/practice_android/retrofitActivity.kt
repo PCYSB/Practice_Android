@@ -35,12 +35,13 @@ class retrofitActivity : AppCompatActivity() {
         val retrofit =
             Retrofit.Builder().baseUrl("https://apis.data.go.kr/")
                 .addConverterFactory(GsonConverterFactory.create()).build()
+
         //인터페이스 객체생성
         val service =
             retrofit.create(RetrofitService::class.java)
                 .getPublicData(
                     serviceKey, "10", "1",
-                    "json", "20231126",
+                    "json", "20231127",
                     "1100", "1"
                 )
 //enqueue로 실행

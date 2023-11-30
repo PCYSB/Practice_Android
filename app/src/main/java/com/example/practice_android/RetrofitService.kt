@@ -9,18 +9,18 @@ import retrofit2.http.Url
 
 
 
-data class Weather (
+data class Weather(
     val response: ResponseData
 )
 
 
-data class ResponseData (
+data class ResponseData(
     val header: Header,
     val body: Body
 )
 
 
-data class Body (
+data class Body(
     val dataType: String,
     val items: Items,
     val pageNo: Long,
@@ -29,12 +29,12 @@ data class Body (
 )
 
 
-data class Items (
+data class Items(
     val item: List<Item>
 )
 
 
-data class Item (
+data class Item(
     val beachNum: String,
     val baseDate: String,
     val baseTime: String,
@@ -47,11 +47,10 @@ data class Item (
 )
 
 
-data class Header (
+data class Header(
     val resultCode: String,
     val resultMsg: String
 )
-
 
 
 interface RetrofitService {
