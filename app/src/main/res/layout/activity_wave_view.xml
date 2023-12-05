@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WaveView">
+    tools:context=".MainActivity">
 
-    <ImageView
-
-        android:id="@+id/wave_anim"
-        android:src="@drawable/wave_shape"
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="500dp">
 
-    <com.scwang.wave.MultiWaveHeader
-        android:id="@+id/wave"
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:scaleY="-1"
-        app:mwhStartColor="#0C053A"
-        app:mwhCloseColor="#0C053A"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.scwang.wave.MultiWaveHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:scaleY="-1"
+            app:mwhStartColor="#0C053A"
+            app:mwhCloseColor="#0C053A"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/wave_header"/>
+
+
+
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
