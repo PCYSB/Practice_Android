@@ -12,7 +12,16 @@ class FragmentFirst : Fragment() {
         container: ViewGroup?, // 프래그먼트에서 사용될 XML의 부모뷰
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.first_fragment, container, false) // 컨테이너의 자식뷰로서 xml을 넣어준다.
+        val view = inflater.inflate(R.layout.first_fragment, container, false) // 컨테이너의 자식뷰로서 xml을 넣어준다.
+
+        return view
         //attachToRoot: 루트뷰에 붙일지 말지 (x)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val data: String? = arguments?.getString("key")
+
     }
 }

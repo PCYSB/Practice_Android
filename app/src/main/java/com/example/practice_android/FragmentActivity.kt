@@ -17,6 +17,10 @@ class FragmentActivity : AppCompatActivity() {
 
        findViewById<TextView>(R.id.add).setOnClickListener {
            val transaction = fragmentManger.beginTransaction() // 시작
+           /*val bundle = Bundle()
+           bundle.putString("key","hello")
+           fragmentFirst.arguments = bundle*/
+
            transaction.replace(R.id.root, fragmentFirst)
            transaction.commit() // 끝
 
