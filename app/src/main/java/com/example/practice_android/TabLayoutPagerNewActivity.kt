@@ -16,9 +16,9 @@ class TabLayoutPagerNewActivity : AppCompatActivity() {
         val viewpager = findViewById<ViewPager2>(R.id.viewPager)
 
         //탭 레이아웃에 탭을 추가하는 방법
-        tabLayout.addTab(tabLayout.newTab().setText("1번째"))
-        tabLayout.addTab(tabLayout.newTab().setText("2번째"))
-        tabLayout.addTab(tabLayout.newTab().setText("3번째"))
+        tabLayout.addTab(tabLayout.newTab())
+        tabLayout.addTab(tabLayout.newTab())
+        tabLayout.addTab(tabLayout.newTab())
 
         //Pager에 adapter를 장착하는 방법
         viewpager.adapter = FragmentAdapter(this, 3)

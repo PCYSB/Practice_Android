@@ -8,17 +8,18 @@
     tools:context=".TableLayoutPagerActivity">
 
     <com.google.android.material.tabs.TabLayout
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabMode="auto"
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="20dp" />
 
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"/>
+        android:layout_weight="1"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
